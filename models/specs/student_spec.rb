@@ -29,4 +29,9 @@ class TestStudent < MiniTest::Test
     assert_equal(35, result)
   end
 
+  # def test_house_id()
+  #   result = @student.house()
+  #   assert_equal("", result)
+  # end
+
 end

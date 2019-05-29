@@ -5,3 +5,9 @@
   <p>Age <%= student.age() %></p>
   <hr />
 <% end %>
+
+<% @houses.each do |house| %>
+  <p>Name <%= house.name() %></p>
+  <p>URL<%= house.url() %></p>
+  <hr />
+<% end %>

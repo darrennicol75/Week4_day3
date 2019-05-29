@@ -1,4 +1,5 @@
 require_relative('../db/sql_runner')
+require_relative('./house')
 
 class Student
 
@@ -8,8 +9,9 @@ class Student
     @id = options[:id].to_i
     @first_name = options['first_name']
     @second_name = options['second_name']
-    @house = options['house']
+    # @house = options['house']
     @age = options['age'].to_i
+    @house_id = options['house_id'].to_i
   end
 
   def save()
@@ -52,5 +54,13 @@ class Student
     return result
   end
 
+  # def house()
+  #   sql = "SELECT * FROM houses WHERE id = $1"
+  #   values = [@house_id]
+  #   results = SqlRunner.run( sql,values )
+  #   house_hash = results[0]
+  #   house = House.new(house_hash)
+  #   return house
+  # end
 
 end
